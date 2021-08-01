@@ -1,0 +1,21 @@
+// In this file, 64em is equal to 1024px (generally accepted as desktop size screens, but also the iPad Pro)
+html {
+	&.js {
+		@media screen and (min-width: 64em) {
+    		margin-top: 0 !important;
+		}
+		
+		#wpadminbar {
+			@media screen and (min-width: 64em) {
+				transition: top 0.5s ease;
+      		}
+
+			&.up {
+				@media screen and (min-width: 64em) {
+			        // Go higher than the actual height of the admin-bar as it's slightly taller on mobile and we need a small overlap to allow the user to tap the panel and bring it down
+					top: -35px;
+				}
+			}
+		}
+	}
+}
